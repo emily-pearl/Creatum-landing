@@ -1,0 +1,462 @@
+/* Basic Reset & Body Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern sans-serif */
+    line-height: 1.6;
+    color: #f0f0f0; /* Light text color for dark background */
+    background-color: #1a1a1a; /* Dark background */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #4dabf7; /* Lighter blue for dark background */
+    transition: color 0.2s ease-in-out;
+    font-weight: bold; /* Bold links */
+}
+
+a:hover {
+    color: #a5d8ff; /* Even lighter blue on hover */
+}
+
+/* Header & Navigation */
+header {
+    padding: 1rem 5%;
+    border-bottom: 1px solid #444; /* Darker border */
+    background-color: #1a1a1a; /* Match body background */
+    position: sticky; /* Keep header visible */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    /* TODO: Replace with actual logo (ensure it's visible on dark bg) */
+    background-color: #555; /* Placeholder background */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.nav-links a,
+.nav-links span {
+    margin-left: 1.5rem;
+    vertical-align: middle;
+    color: #f0f0f0; /* Light text for nav links */
+}
+
+.nav-links span {
+    font-weight: normal; /* Normal weight for EN/DE */
+}
+
+.cta-button-header {
+    margin-left: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent; /* Outline style */
+    color: #4dabf7; /* Match link color */
+    border: 2px solid #4dabf7; /* Outline */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cta-button-header:hover {
+    background-color: #4dabf7;
+    color: #1a1a1a; /* Dark text on hover */
+}
+
+/* Sections General Styling */
+section {
+    padding: 4rem 5%;
+    text-align: center;
+    border-bottom: 1px solid #333; /* Separator lines */
+}
+
+/* Remove alternating background for dark theme */
+/* section:nth-child(odd) {
+     background-color: #2b2b2b; 
+} */
+
+section h2 {
+    margin-bottom: 2.5rem; 
+    font-size: 2.4rem; /* Slightly larger */
+    color: #ffffff; /* White headings */
+    font-weight: bold; /* Bold headings */
+}
+
+section h3 {
+    font-weight: bold; /* Bold subheadings */
+    color: #e0e0e0;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #1a1a1a; /* Match body background */
+    padding: 6rem 5%;
+    border-bottom: none; /* No border below hero */
+}
+
+#hero h1 {
+    font-size: 3rem; /* Larger headline */
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.3rem; /* Larger subheadline */
+    margin-bottom: 2.5rem;
+    color: #cccccc; /* Lighter grey */
+}
+
+.cta-button-primary {
+    padding: 1rem 2.5rem; 
+    background-color: transparent; /* Outline style */
+    color: #51cf66; /* Green outline/text */
+    border: 2px solid #51cf66; /* Green outline */
+    border-radius: 5px;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem; 
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.cta-button-primary:hover {
+    background-color: #51cf66; /* Fill green on hover */
+    color: #1a1a1a; /* Dark text */
+}
+
+.cta-button-primary:active {
+    transform: scale(0.98);
+}
+
+.cta-link-secondary {
+    color: #4dabf7; /* Secondary link color */
+    font-size: 1rem;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.cta-link-secondary:hover {
+    color: #a5d8ff;
+    text-decoration: underline;
+}
+
+/* Features Section */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2.5rem;
+    text-align: center; 
+}
+
+.feature-item {
+    background-color: #2b2b2b; /* Slightly lighter dark background */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #444; /* Subtle border */
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.05); */ /* Shadow less visible on dark */
+}
+
+.feature-icon {
+    height: 50px; 
+    margin-bottom: 1rem;
+    /* TODO: Add actual SVG icons */
+    /* background-color: #555; Placeholder */
+    width: 50px;
+    /* border-radius: 50%; */
+    display: inline-block;
+    color: #4dabf7; /* Icon color */
+}
+
+.feature-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem; /* Bolded via section h3 */
+}
+
+/* How It Works Section */
+.steps-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 1rem;
+    flex-wrap: wrap; 
+    /* TODO: Replace with actual diagram styling */
+    border: 1px dashed #555; /* Darker dashed border */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.step {
+    flex-basis: 250px; 
+    padding: 1.5rem;
+    background-color: #2b2b2b; /* Match feature item bg */
+    border-radius: 5px;
+    border: 1px solid #444; /* Match feature item border */
+}
+
+.step h3 {
+    font-size: 1.2rem; /* Bolded via section h3 */
+    margin-bottom: 0.5rem;
+}
+
+.step-arrow {
+    font-size: 2.5rem;
+    color: #4dabf7;
+    align-self: center; 
+}
+
+/* Benefits Section */
+.benefits-container {
+    display: flex;
+    gap: 3rem;
+    text-align: left;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.benefits-highlight {
+    flex: 1.2; 
+    font-style: italic;
+    background-color: #2b2b2b; /* Match feature item bg */
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid #4dabf7; /* Keep blue accent */
+    color: #cccccc;
+}
+
+.benefits-highlight h4 {
+    font-style: normal;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.benefits-highlight p {
+    margin-bottom: 1rem;
+}
+
+.benefits-highlight strong {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    color: #e0e0e0;
+}
+
+.benefits-list {
+    flex: 1;
+    padding-top: 1rem; 
+}
+
+.benefits-list h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem; /* Bolded via section h3 */
+}
+
+.benefits-list ul {
+    list-style: none; 
+    padding-left: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    color: #cccccc;
+}
+
+.benefits-list li::before {
+    content: '\2713'; /* Checkmark */
+    color: #51cf66; /* Green checkmark */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+}
+
+#ask-hayley-placeholder button {
+    padding: 0.8rem 1.5rem;
+    background-color: transparent; /* Outline style */
+    color: #fab005; /* Yellow outline/text */
+    border: 2px solid #fab005; /* Yellow outline */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#ask-hayley-placeholder button:hover {
+    background-color: #fab005;
+    color: #1a1a1a;
+}
+
+/* CTA Section */
+#cta {
+    background-color: #0056b3; /* Keep a contrasting background */
+    color: white;
+}
+
+#cta h2 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+#cta .cta-button-primary {
+    background-color: transparent; /* Outline style */
+    color: #51cf66; /* Green outline/text */
+    border: 2px solid #51cf66; /* Green outline */
+}
+
+#cta .cta-button-primary:hover {
+    background-color: #51cf66; /* Fill green on hover */
+    color: #1a1a1a; /* Dark text */
+}
+
+#cta .cta-link-secondary {
+    color: #f8f9fa; /* Light color for contrast */
+    display: inline-block; 
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#cta .cta-link-secondary:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq-item {
+    text-align: left;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444; /* Darker border */
+    padding-bottom: 1rem;
+}
+
+.faq-item h3 {
+    margin-bottom: 0.5rem;
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    color: #e0e0e0;
+    font-size: 1.3rem; /* Bolded via section h3 */
+}
+
+.faq-item h3::after {
+    content: '\25BC'; /* Down arrow */
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+    color: #cccccc;
+}
+
+.faq-item.open h3::after {
+    transform: rotate(180deg); /* Up arrow */
+}
+
+.faq-item p {
+    margin-top: 1rem;
+    padding-left: 1rem; 
+    display: none; 
+    color: #cccccc;
+}
+
+.faq-item.open p {
+    display: block; 
+}
+
+/* About Section */
+#about {
+    text-align: left;
+}
+
+#about a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: 3rem;
+    border-top: 1px solid #444; /* Darker border */
+    font-size: 0.9rem;
+    color: #aaa; /* Lighter grey footer text */
+    background-color: #1a1a1a; /* Match body background */
+}
+
+footer a {
+    color: #ccc; /* Lighter footer links */
+    margin: 0 0.5rem;
+    font-weight: normal; /* Normal weight footer links */
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Basic Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .nav-links a,
+    .nav-links span,
+    .nav-links button {
+        margin: 0.5rem;
+        display: block;
+    }
+
+    #hero h1 {
+        font-size: 2.4rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+    .cta-button-primary {
+        padding: 0.8rem 1.8rem;
+        font-size: 1.1rem;
+        display: block; /* Stack buttons */
+        margin: 1rem auto;
+    }
+    .cta-link-secondary {
+        display: block;
+        margin: 1rem auto;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .steps-placeholder {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+    .benefits-container {
+        flex-direction: column;
+    }
+}
+
